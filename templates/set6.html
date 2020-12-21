@@ -1,0 +1,32 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+	<div class="container-fluid" style="padding-left: 40px;padding-right: 40px;margin-top: 30px;">
+		<h4 style="color: #0d6efd; text-align: center;">Essay Set 6</h4>
+		<h6>Source Essay : <br><br>
+		When the Empire State Building was conceived, it was planned as the world’s tallest building, taller even than the new Chrysler Building that was being constructed at Forty-second Street and Lexington Avenue in New York. At seventy-seven stories, it was the tallest building before the Empire State began construction, and Al Smith was determined to outstrip it in height.<br>
+		The architect building the Chrysler Building, however, had a trick up his sleeve. He secretly constructed a 185-foot spire inside the building, and then shocked the public and the media by hoisting it up to the top of the Chrysler Building, bringing it to a height of 1,046 feet, 46 feet taller than the originally announced height of the Empire State Building.<br>
+		Al Smith realized that he was close to losing the title of world’s tallest building, and on December 11, 1929, he announced that the Empire State would now reach the height of 1,250 feet. He would add a top or a hat to the building that would be even more distinctive than any other building in the city. John Tauranac describes the plan:<br>
+		[The top of the Empire State Building] would be more than ornamental, more than a spire or dome or a pyramid put there to add a desired few feet to the height of the building or to mask something as mundane as a water tank. Their top, they said, would serve a higher calling. The Empire State Building would be equipped for an age of transportation that was then only the dream of aviation pioneers.
+		This dream of the aviation pioneers was travel by dirigible, or zeppelin, and the Empire State Building was going to have a mooring mast at its top for docking these new airships, which would accommodate passengers on already existing transatlantic routes and new routes that were yet to come.<br><br>
+		Prompt : <br><br>
+		Based on the excerpt, describe the obstacles the builders of the Empire State Building faced in attempting to allow dirigibles to dock there. Support your answer with relevant and specific information from the excerpt.
+		</h6>
+		<form action="{{url_for('set6')}}" method="post">
+			<div class="form-floating" style="margin-bottom: 15px;">
+				<textarea class="form-control" id="floatingTextarea2" style="height: 500px" name="essay" required></textarea>
+				<label for="floatingTextarea2">Enter the essay here</label>
+			</div>
+			<div style="text-align: center; margin-bottom: 25px;">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+		<div style="margin-bottom: 100px; color: #0d6efd;">
+			<h4>{{ max }}</h4>
+			<h4>{{ min }}</h4>
+			<h4>{{ result }}</h4>
+		</div>
+	</div>
+
+{% endblock %}

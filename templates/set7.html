@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+	<div class="container-fluid" style="padding-left: 40px;padding-right: 40px;margin-top: 30px;">
+		<h4 style="color: #0d6efd; text-align: center;">Essay Set 7</h4>
+		<h6>Write about patience. Being patient means that you are understanding and tolerant. A patient person experience difficulties without complaining.<br><br>
+		Do only one of the following: write a story about a time when you were patient OR write a story about a time when someone you know was patient OR write a story in your own way about patience.
+		</h6>
+		<form action="{{url_for('set7')}}" method="post">
+			<div class="form-floating" style="margin-bottom: 15px;">
+				<textarea class="form-control" id="floatingTextarea2" style="height: 500px" name="essay" required></textarea>
+				<label for="floatingTextarea2">Enter the essay here</label>
+			</div>
+			<div style="text-align: center; margin-bottom: 25px;">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+		<div style="margin-bottom: 100px; color: #0d6efd;">
+			<h4>{{ max }}</h4>
+			<h4>{{ min }}</h4>
+			<h4>{{ result }}</h4>
+		</div>
+	</div>
+
+{% endblock %}

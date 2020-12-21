@@ -1,0 +1,44 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+	<div class="container-fluid" style="padding-left: 40px;padding-right: 40px;margin-top: 30px;">
+		<h4 style="color: #0d6efd; text-align: center;">Essay Set 4</h4>
+		<h6>Source Essay : <br><br>
+		Saeng, a teenage girl, and her family have moved to the United States from Vietnam. As Saeng walks home after failing her driver’s test, she sees a familiar plant. Later, she goes to a florist shop to see if the plant can be purchased.
+		It was like walking into another world. A hot, moist world exploding with greenery. Huge flat leaves, delicate wisps of tendrils, ferns and fronds and vines of all shades and shapes grew in seemingly random profusion.<br>
+		“Over there, in the corner, the hibiscus. Is that what you mean?” The florist pointed at a leafy potted plant by the corner. 
+		There, in a shaft of the wan afternoon sunlight, was a single blood-red blossom, its five petals splayed back to reveal a long stamen tipped with yellow pollen. Saeng felt a shock of recognition so intense, it was almost visceral.1
+		“Saebba,” Saeng whispered.<br>
+		A saebba hedge, tall and lush, had surrounded their garden, its lush green leaves dotted with vermilion flowers. And sometimes after a monsoon rain, a blossom or two would have blown into the well, so that when she drew the well water, she would find a red blossom floating in the bucket.
+		Slowly, Saeng walked down the narrow aisle toward the hibiscus. Orchids, lanna bushes, oleanders, elephant ear begonias, and bougainvillea vines surrounded her. Plants that she had not even realized she had known but had forgotten drew her back into her childhood world.
+		When she got to the hibiscus, she reached out and touched a petal gently. It felt smooth and cool, with a hint of velvet toward the center—just as she had known it would feel.<br>
+		She went over to the corner of the vegetable patch and started to dig a hole in the ground. The soil was cold and hard, and she had trouble thrusting the shovel into it. Wisps of her gray hair trailed out in the breeze, and her slight frown deepened the wrinkles around her eyes. There was a frail, wiry beauty to her that touched Saeng deeply.
+		“Here, let me help, Mother,” she offered, getting up and taking the shovel away from her.
+		Mrs. Panouvong made no resistance. “I’ll bring in the hot peppers and bitter melons, then, and start dinner. How would you like an omelet with slices of the bitter melon?”<br>
+		“I’d love it,” Saeng said.<br>
+		Left alone in the garden, Saeng dug out a hole and carefully lowered the “winter hibiscus” into it. She could hear the sounds of cooking from the kitchen now, the beating of eggs against a bowl, the sizzle of hot oil in the pan. The pungent smell of bitter melon wafted out, and Saeng’s mouth watered. It was a cultivated taste, she had discovered—none of her classmates or friends, not even Mrs. Lambert, liked it—this sharp, bitter melon that left a golden aftertaste on the tongue. But she had grown up eating it and, she admitted to herself, much preferred it to a Big Mac.
+		The “winter hibiscus” was in the ground now, and Saeng tamped down the soil around it. Overhead, a flock of Canada geese flew by, their faint honks clear and—yes—familiar to Saeng now. Almost reluctantly, she realized that many of the things that she had thought of as strange before had become, through the quiet repetition of season upon season, almost familiar to her now. Like the geese. She lifted her head and watched as their distinctive V was etched against the evening sky, slowly fading into the distance.<br>
+		When they come back, Saeng vowed silently to herself, in the spring, when the snows melt and the geese return and this hibiscus is budding, then I will take that test again.<br><br>
+		Prompt : <br><br>
+		Read the last paragraph of the story.<br>
+		"When they come back, Saeng vowed silently to herself, in the spring, when the snows melt and the geese return and this hibiscus is budding, then I will take that test again." <br>
+		Write a response that explains why the author concludes the story with this paragraph. In your response, include details and examples from the story that support your ideas.<br>
+		</h6>
+		<form action="{{url_for('set4')}}" method="post">
+			<div class="form-floating" style="margin-bottom: 15px;">
+				<textarea class="form-control" id="floatingTextarea2" style="height: 500px" name="essay" required></textarea>
+				<label for="floatingTextarea2">Enter the essay here</label>
+			</div>
+			<div style="text-align: center; margin-bottom: 25px;">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+		<div style="margin-bottom: 100px; color: #0d6efd;">
+			<h4>{{ max }}</h4>
+			<h4>{{ min }}</h4>
+			<h4>{{ result }}</h4>
+		</div>
+	</div>
+
+{% endblock %}

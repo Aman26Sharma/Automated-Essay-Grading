@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+	<div class="container-fluid" style="padding-left: 40px;padding-right: 40px;margin-top: 30px;">
+		<h4 style="color: #0d6efd; text-align: center;">Essay Set 2</h4>
+		<h6>Censorship in the Libraries<br><br>
+		"All of us can think of a book that we hope none of our children or any other children have taken off the shelf. But if I have the right to remove that book from the shelf -- that work I abhor -- then you also have exactly the same right and so does everyone else. And then we have no books left on the shelf for any of us." --Katherine Paterson, Author<br><br>
+		Write a persuasive essay to a newspaper reflecting your vies on censorship in libraries. Do you believe that certain materials, such as books, music, movies, magazines, etc., should be removed from the shelves if they are found offensive? Support your position with convincing arguments from your own experience, observations, and/or reading.
+		</h6>
+		<form action="{{url_for('set2')}}" method="post">
+			<div class="form-floating" style="margin-bottom: 15px;">
+				<textarea class="form-control" id="floatingTextarea2" style="height: 500px" name="essay" required></textarea>
+				<label for="floatingTextarea2">Enter the essay here</label>
+			</div>
+			<div style="text-align: center; margin-bottom: 25px;">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+		<div style="margin-bottom: 100px; color: #0d6efd;">
+			<h4>{{ max }}</h4>
+			<h4>{{ min }}</h4>
+			<h4>{{ result }}</h4>
+		</div>
+	</div>
+
+{% endblock %}
