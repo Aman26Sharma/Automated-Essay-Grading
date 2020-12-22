@@ -17,5 +17,14 @@ ________________________________________________________________________________
 _________________________________________________________________________________________________________________________________________________________________________________________
 ### Performance
 The accuracy is weighted by Quadrated Weighted Kappa(QWK) which measures the agreement between two users.The model architecture consists of 2 Long Short Term Memory(LSTM) layers with a Dense output layer. The final layer uses the Relu activation function.
+
 QWK calculated is 0.95 or 95% on test dataset.
 _________________________________________________________________________________________________________________________________________________________________________________________
+### App
+- The Frontend of the app is made using HTML, CSS and Bootstrap.
+- The Frontend and Deep Learning model are integrated in the app using Flask and python.
+- If you want to try the app, then clone this repo and run
+'''
+python app.py
+'''
+__________________________________________________________________________________________________________________________________________________________________________________________
