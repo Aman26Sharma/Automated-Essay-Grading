@@ -8,3 +8,14 @@ The dataset is taken from The Hewlett Foundation: Automated Essay Scoring. It wa
 
 The link of the dataset -> https://www.kaggle.com/c/asap-aes/data
 _________________________________________________________________________________________________________________________________________________________________________________________
+### Data Preprocessing
+* Firstly, the paragraphs are turned into list of sentences.
+* Then these sentences are turned into list of words.
+* After this, we have trained a Word2Vec model on the training set. We have saved this model as word2vecmodel.bin
+* This model is then used for generating Average Feature Vectors (X to train in deep learning model).
+* The deep learning model is made using lstm. This model is saved as lstmmodel.h5
+_________________________________________________________________________________________________________________________________________________________________________________________
+### Performance
+The accuracy is weighted by Quadrated Weighted Kappa(QWK) which measures the agreement between two users.The model architecture consists of 2 Long Short Term Memory(LSTM) layers with a Dense output layer. The final layer uses the Relu activation function.
+QWK calculated is 0.95 or 95% on test dataset.
+_________________________________________________________________________________________________________________________________________________________________________________________
